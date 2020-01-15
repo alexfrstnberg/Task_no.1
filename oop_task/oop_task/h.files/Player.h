@@ -5,11 +5,14 @@ using namespace std;
 
 
 class Player {
-public:
 
+private:
+	int id;
 	string Name;
 	int Rank = 1000;
 
+public:
+	
 	Player(string Name, int Rank, int id) : Name(Name), Rank(Rank), id(id) {
 	}
 
@@ -18,9 +21,27 @@ public:
 
 	}
 
+	void addRank() {
+		rank += 25;
+	}
+
+	void subRank() {
+		if (rank >= 25)	rank -= 25;
+	}
+
 	void ready() {
 		cout << "Hero " << Name << " is ready" << endl;
 	}
-private:
-	int id;
+
+	string getName() {
+		return name;
+	}
+
+	int getRank() {
+		return rank;
+	}
+
+	int getID() {
+		return id;
+	}
 };
