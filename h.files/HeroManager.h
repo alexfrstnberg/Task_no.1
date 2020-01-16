@@ -29,7 +29,7 @@ public:
 	}
 
 	void ListOfHeroes() {
-		cout << endl << endl;
+		cout << "Heroes" << endl << endl;
 		for (size_t i = 0; i < heroes.size(); i++) {
 			cout << "Name: " << heroes[i].getName()
 				<< "\tHP: " << heroes[i].getHP()
@@ -50,13 +50,12 @@ public:
 				return heroes[i];
 			}
 		}
-		cout << "There is no hero with this name!" << endl;
 	}
 
 	int AddHero(string name, int hp, int damage, int speed) {
 		for (size_t i = 0; i < heroes.size(); i++) {
 			if (heroes[i].getName() == name) {
-				cout << "This name is already exist!" << endl;
+				cout << "This name already exists!" << endl;
 				return 0;
 			}
 		}
